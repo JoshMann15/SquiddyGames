@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Work - Google Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="button" value="back" onclick="toMenu()">
+    <div id='ruffle' class="center"></div>
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+        
+        function toMenu() {
+            window.location.href = "/index.html"
+        }
+
+        var swfobject = {};
+
+        swfobject.embedSWF = function(url, cont, width, height){
+            var ruffle = window.RufflePlayer.newest(),
+                player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    style: 'width: ' + (window.innerWidth - (window.innerWidth/10)) + 'px; height: ' + (window.innerHeight - (window.innerHeight/10)) + 'px',
+                });
+            player.load({ url: url });
+        }
+
+        window.RufflePlayer = window.RufflePlayer || {};
+            window.RufflePlayer.config = {
+            "autoplay": "on", 
+            "splashscreen": false, 
+            "unmuteOverlay":"hidden",
+        };
+
+        // Initialize URL PARAMS
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const game = urlParams.get('game')
+        swfobject.embedSWF(('/games/' + game), 'ruffle', 500, 500);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+root {
+    --bgcolor: #3e3e42;
+    --highlightcolor: #007acc;
+}
+
+
+body {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    background-color: #3e3e42;
+}
+
+.center {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: #007acc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.game-icon {
+    text-align: center;
+    width: 150px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #fff;
+    background-color: #252526;
+    float: left;
+    margin: 10px;
+}
+
+.game-icon img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.game-icon a {
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.games-container {
+    padding: 20px;
+}

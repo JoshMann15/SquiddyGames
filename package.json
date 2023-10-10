@@ -1,13 +1,13 @@
 {
   "name": "unblockedgames",
   "version": "1.0.0",
-  "description": "",
+  "description": "Good!",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
     "build": "webpack"
   },
-  "author": "",
+  "author": "Josh N",
   "license": "ISC"
 }
